@@ -23,12 +23,12 @@ def get_reg(name):
     except WindowsError:
         return None
 
+#Set Value 1/20 (will just write the value to reg, the changed mouse val requires a win re-log to apply*)
+set_reg('MouseSensitivity', str(10))
+
 #Example MouseSensitivity
 #Read value 
 print (get_reg('MouseSensitivity'))
-
-#Set Value 1/20 (will just write the value to reg, the changed mouse val requires a win re-log to apply*)
-set_reg('MouseSensitivity', str(10))
 
 #*For instant apply of SystemParameters like the mouse speed on-write, you can use win32gui/SPI
 #http://docs.activestate.com/activepython/3.4/pywin32/win32gui__SystemParametersInfo_meth.html
